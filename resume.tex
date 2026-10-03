@@ -1,31 +1,21 @@
 \documentclass[10pt,letterpaper]{article}
 
 % Lucky Sah resume
-% Red filler prompts are intentionally visible in the review draft.
-% Change \showfillertrue to \showfillerfalse for a clean preview.
+% Formatting follows the supplied Word resume.
+% Change \showfillertrue to \showfillerfalse to hide bracketed prompts.
 
-\usepackage[letterpaper,top=0.46in,bottom=0.48in,left=0.60in,right=0.60in]{geometry}
+\usepackage[letterpaper,top=0.42in,bottom=0.42in,left=0.55in,right=0.55in]{geometry}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage[scaled=0.94]{helvet}
+\usepackage{tgheros}
 \renewcommand{\familydefault}{\sfdefault}
 \usepackage{microtype}
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{enumitem}
-\usepackage{xcolor}
 \usepackage{hyperref}
-\usepackage{ragged2e}
-
-\definecolor{Navy}{HTML}{173B57}
-\definecolor{Slate}{HTML}{465966}
-\definecolor{Body}{HTML}{18232A}
-\definecolor{FillerRed}{HTML}{B42318}
 
 \hypersetup{
-  colorlinks=true,
-  urlcolor=Navy,
-  linkcolor=Navy,
+  hidelinks,
   pdfauthor={Lucky Sah},
   pdftitle={Lucky Sah Robotics and Mechatronics Resume},
   pdfsubject={Robotics hardware, mechanical design, and prototyping}
@@ -35,133 +25,127 @@
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{0pt}
-\setlength{\emergencystretch}{1.5em}
-\color{Body}
+\setlength{\emergencystretch}{1em}
 \raggedbottom
 
-% ---------- Redlined filler controls ----------
+% ---------- Review prompts ----------
 \newif\ifshowfiller
 \showfillertrue
 
-\newcommand{\fillerinline}[1]{%
-  \ifshowfiller\textcolor{FillerRed}{\textbf{[FILLER:} #1\textbf{]}}\fi
+\newcommand{\placeholder}[1]{%
+  \ifshowfiller\textit{[ADD #1]}\fi
 }
 
-\newcommand{\filleritem}[1]{%
-  \ifshowfiller\item \textcolor{FillerRed}{\textbf{FILLER --} #1}\fi
+\newcommand{\startpresent}{%
+  \ifshowfiller\textit{[ADD START DATE]} -- \fi Present
 }
 
 % ---------- Resume components ----------
 \newcommand{\resumesection}[1]{%
-  \vspace{4.3pt}%
-  {\color{Navy}\fontsize{9.4}{10.5}\selectfont\bfseries\MakeUppercase{#1}}\par
-  \vspace{2.2pt}%
+  \par\vspace{15pt}%
+  {\fontsize{10.5}{11}\selectfont\bfseries\MakeUppercase{#1}}\par
+  \vspace{1pt}\hrule height 0.75pt\vspace{9pt}%
 }
 
-\newcommand{\entry}[3]{%
-  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}p{1.45in}@{}}
-    \textbf{#1} & {\small #2} \\
-    {\small\color{Slate}#3} &
-  \end{tabularx}\vspace{-2.5pt}
+\newcommand{\firstresumesection}[1]{%
+  \par\vspace{4pt}%
+  {\fontsize{10.5}{11}\selectfont\bfseries\MakeUppercase{#1}}\par
+  \vspace{1pt}\hrule height 0.75pt\vspace{9pt}%
 }
 
-\newcommand{\project}[2]{%
-  \textbf{#1}\enspace{\color{Slate}#2}\par
+\newcommand{\entry}[2]{%
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X>{\raggedleft\arraybackslash}X@{}}
+    \textbf{#1} & \textit{#2}
+  \end{tabularx}\vspace{-1.6pt}%
 }
 
 \newenvironment{resumelist}{%
   \begin{itemize}[
-    leftmargin=1.15em,
-    label=\textcolor{Navy}{\raisebox{0.2ex}{\tiny\textbullet}},
-    topsep=1.3pt,
+    leftmargin=0.15in,
+    label=\textbullet,
+    labelsep=0.05in,
+    topsep=1.2pt,
     partopsep=0pt,
     parsep=0pt,
-    itemsep=0.6pt
+    itemsep=0.8pt
   ]
-}{\end{itemize}\vspace{-1.2pt}}
+}{\end{itemize}\vspace{0pt}}
 
 \begin{document}
+\fontsize{9}{10.2}\selectfont
 
 % ---------- Header ----------
 \begin{center}
-  {\fontsize{24}{25}\selectfont\bfseries\color{Navy} LUCKY SAH}\par
+  {\fontsize{17}{19}\selectfont\bfseries LUCKY SAH}\par
   \vspace{2pt}
-  {\fontsize{9.8}{11}\selectfont\bfseries
-    MECHATRONICS ENGINEERING \enspace\textcolor{Slate}{/}\enspace
-    ROBOTICS HARDWARE \enspace\textcolor{Slate}{/}\enspace
-    PROTOTYPING
+  {\fontsize{9.5}{10.5}\selectfont\bfseries
+    Mechatronics Engineering \textbar{} Robotics Hardware \textbar{} Mechanical Design \textbar{} Prototyping
   }\par
-  \vspace{2.5pt}
-  {\small
-    Kent, OH \enspace\textcolor{Slate}{\textbullet}\enspace
-    \href{mailto:lsah@kent.edu}{lsah@kent.edu} \enspace\textcolor{Slate}{\textbullet}\enspace
-    \fillerinline{phone} \enspace
-    \fillerinline{LinkedIn or portfolio URL}
-  }
+  \vspace{3pt}
+  Kent, OH \textbar{} \href{mailto:lsah@kent.edu}{\underline{lsah@kent.edu}}
+  \ifshowfiller\ \textbar{} \placeholder{PHONE}\ \textbar{} \placeholder{LINKEDIN OR PORTFOLIO URL}\fi
 \end{center}
-\vspace{-1pt}
+\vspace{1pt}
 
-\resumesection{Profile}
-Mechatronics Engineering undergraduate building robotic systems from parametric CAD through fabrication,
-actuation integration, and embedded hardware. Experience spans mobile robots, expressive mechanisms,
-modular AI companion platforms, and automated machinery in research and product-development settings.
+\firstresumesection{Professional Summary}
+Mechatronics Engineering undergraduate with hands-on experience designing and prototyping robotic systems,
+including mobile robots, expressive robot mechanisms, and modular AI companion hardware. Skilled in CAD,
+mechanical-electrical integration, actuation, embedded systems, 3D printing, and fabrication. Experienced in
+translating concepts from parametric CAD assemblies into functional prototypes in research and product-development environments.
 
-\resumesection{Technical Toolbox}
-\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash\bfseries\color{Navy}}p{1.65in}X@{}}
-CAD and mechanical & Autodesk Inventor Professional, Fusion 360, SolidWorks, parametric assemblies, 3D modeling, BOM development \\
-Robotics and integration & Actuation systems, sensors, motor drivers, mechanical-electrical integration, ROS \\
-Embedded and controls & Arduino, microcontrollers, sensor integration, PLC fundamentals, industrial automation \\
-Fabrication & FDM and resin 3D printing, CNC machining, soldering, power tools, silicone, fiber, and polyurethane molding
-\end{tabularx}
+\resumesection{Technical Skills}
+\textbf{CAD \& Mechanical Design:} Autodesk Inventor Professional, Fusion 360, SolidWorks, parametric assemblies, 3D modeling, BOM development\par
+\vspace{0.3pt}
+\textbf{Robotics \& Integration:} Actuation systems, sensors, motor drivers, mechanical-electrical integration, ROS.\par
+\vspace{0.3pt}
+\textbf{Embedded \& Controls:} Arduino, microcontrollers, sensor integration, PLC fundamentals, industrial automation\par
+\vspace{0.3pt}
+\textbf{Fabrication:} FDM/resin 3D printing, CNC machining, soldering, power tools, silicone, fiber, and polyurethane molding.
 
 \resumesection{Experience}
-\entry{Robotics Hardware Intern (Co-op)}{\fillerinline{start--end dates}}{Open Drive LLC \textbar{} Plaipin Product Line}
+\entry{Robotics Hardware Intern (Co-op) --- Open Drive LLC}{Plaipin Product Line}
 \begin{resumelist}
   \item Translate CAD designs into functional robotic hardware, prototypes, and integrated mechanical subsystems.
-  \item Support mechanical design, assembly, actuation integration, and iterative prototype development for a modular AI companion robot platform.
-  \filleritem{Add one measured result: prototype iterations, fabricated parts, test cycles, or a time/cost improvement.}
+  \item Support mechanical design, assembly, actuation integration, and iterative prototype development for an AI companion robot platform.
 \end{resumelist}
 
-\entry{Prototyping Manager}{\fillerinline{start}--Present}{Advanced Telerobotics Research Lab \textbar{} Kent State University}
+\entry{Prototyping Manager --- Advanced Telerobotics Research (ATR) Lab, Kent State University}{\startpresent}
 \begin{resumelist}
-  \item Lead mechanical prototyping for robotics research from parametric CAD through fabrication, assembly, and functional hardware.
+  \item Lead mechanical prototyping for robotics research projects from CAD through fabrication, assembly, and functional hardware.
   \item Design and integrate structures, mounts, actuation components, sensors, and embedded hardware for robotic systems.
-  \item Coordinate equipment, workspace, and prototyping support across interdisciplinary research teams.
-  \filleritem{Quantify scope: number of projects, researchers supported, machines maintained, or prototypes delivered.}
+  \item Coordinate prototyping resources, equipment, workspace, and project support across interdisciplinary research teams.
 \end{resumelist}
 
-\entry{Automation and Product Development Intern}{2022--2024}{Thoplo Machine Pvt. Ltd. \& Baliyo Ventures Pvt. Ltd.}
+\entry{Automation / Product Development Intern --- Thoplo Machine Pvt. Ltd. \& Baliyo Ventures Pvt. Ltd. (2022--2024)}{}
 \begin{resumelist}
   \item Contributed to the design, fabrication, assembly, and testing of automated production machinery and mechanical systems.
   \item Supported PLC lab setup, wiring, industrial equipment assembly, machining, fiber molding, and production-oriented fabrication.
-  \filleritem{Add a concrete outcome: equipment commissioned, assemblies completed, or process throughput improved.}
 \end{resumelist}
 
 \resumesection{Selected Robotics Projects}
-\project{Plaipin -- Modular AI Companion Robot Platform}{Led mechanical CAD design of the core device and modular body configurations; developed assemblies integrating actuation, sensors, and onboard hardware.}
-\vspace{1.2pt}
-\project{Mini TurtleBot -- Low-Cost Modular Mobile Robot}{Designed the chassis and motion architecture for low-cost fabrication, modular expansion, and robotic hardware integration.}
-\vspace{1.2pt}
-\project{KAMI Head -- Human-Robot Interaction Module}{Designed an expressive robotic head assembly with mechanical motion systems and embedded components for human-robot interaction.}
-\ifshowfiller
-  \vspace{1.2pt}
-  {\small\textcolor{FillerRed}{\textbf{FILLER --} Add a repository, demo, publication, or competition link to the strongest project.}}\par
-\fi
+\textbf{Plaipin --- Modular AI Companion Robot Platform}
+\begin{resumelist}
+  \item Led mechanical CAD design of the core device and modular body configurations; developed assemblies integrating actuation, sensors, and onboard hardware.
+\end{resumelist}
+\textbf{Mini TurtleBot --- Low-Cost Modular Mobile Robot \textbar{} ATR Lab}
+\begin{resumelist}
+  \item Designed the chassis and motion architecture for low-cost fabrication, modular expansion, and integration of robotic hardware.
+\end{resumelist}
+\textbf{KAMI Head --- Human-Robot Interaction Module}
+\begin{resumelist}
+  \item Designed an expressive robotic head assembly with mechanical motion systems and embedded components for human-robot interaction.
+\end{resumelist}
 
 \resumesection{Education}
-\entry{B.S. Mechatronics Engineering; Minor in Computer Science}{Expected 2028}{Kent State University \textbar{} Kent, OH}
-{\small\textbf{Focus:} Robotics, mechanical systems, electronics, prototyping, and applied engineering design.
-\fillerinline{GPA, honors, or 2--3 advanced courses if strong}}
+\entry{Kent State University --- B.S. Mechatronics Engineering, Minor in Computer Science, Kent, OH}{Expected 2028}
+\textbf{Focus:} Robotics, mechanical systems, electronics, prototyping, and applied engineering design.
 
-\resumesection{Leadership and Technical Activities}
-{\small
-\textbf{Founder and Organizer, Young Scientist Community}\enspace
-{\color{Slate}RECAST, Tribhuvan University}\enspace
+\resumesection{Leadership, Competitions \& Technical Activities}
+\textbf{Founder \& Organizer, Young Scientist Community (under RECAST - Tribhuvan University)} ---
 Led robotics education, technical workshops, STEM events, coordination, and outreach.\par
-\vspace{1pt}
-\textbf{Selected competitions and conferences:}
+\vspace{0.3pt}
+\textbf{Selected competitions/conferences:}
 World Robot Olympiad (Thailand), FIRST Global Challenge (Switzerland), Asian Development Bank Hackathon,
 Robo-Battle Bots, Robo Soccer, Founder's Inc (San Francisco), and Asian Pacific Conference of Young Scientists.
-}
 
 \end{document}
