@@ -3,6 +3,8 @@
 % Lucky Sah resume
 % Formatting follows the supplied Word resume while improving hierarchy.
 % Change \showfillertrue to \showfillerfalse to hide bracketed prompts.
+% Experience, project, and technical claims are confirmed by the user.
+% Red review marks apply only to missing fields and fictional publication samples.
 
 \usepackage[letterpaper,top=0.42in,bottom=0.42in,left=0.55in,right=0.55in]{geometry}
 \usepackage[T1]{fontenc}
@@ -12,7 +14,9 @@
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage{enumitem}
+\usepackage{xcolor}
 \usepackage{hyperref}
+\definecolor{reviewred}{HTML}{B91C1C}
 
 \hypersetup{
   hidelinks,
@@ -33,11 +37,11 @@
 \showfillertrue
 
 \newcommand{\placeholder}[1]{%
-  \ifshowfiller\textit{[ADD #1]}\fi
+  \ifshowfiller\textcolor{reviewred}{\textit{[ADD #1]}}\fi
 }
 
 \newcommand{\startpresent}{%
-  \ifshowfiller\textit{[ADD START DATE]} -- \fi Present
+  \ifshowfiller\textcolor{reviewred}{\textit{[ADD START DATE]}} -- \fi Present
 }
 
 % ---------- Resume components ----------
@@ -105,35 +109,21 @@ Coauthored research papers address mechanical systems, agentic robotics, and hum
 \resumesection{Research \& Engineering Experience}
 \roleentry{Robotics Researcher}{Advanced Telerobotics Research (ATR) Lab, Kent State University}{\startpresent}
 \begin{resumelist}
-  % REVIEW: Confirm that the humanoid mechanisms and their development belong
-  % to this ATR Lab role.
   \item Lead mechanical development of mobile robots and humanoid robotic mechanisms, designing structures, actuator mounts, and sensor assemblies from CAD through working prototypes.
-  % REVIEW: The user confirmed full-stack robotics development and these tools.
-  % Specific actuator-control and sensor-feedback interfaces, robot-motion models,
-  % and attribution to the ATR Lab role are proposed details for the user's review.
   \item Develop ROS interfaces for actuator control and sensor feedback; build simulation models in Isaac Sim and MuJoCo to test robot motion and hardware--software integration.
-  % REVIEW: Diagnosing mechanical and control issues is proposed wording;
-  % confirm the specific testing and troubleshooting responsibilities.
   \item Integrate actuators, sensors, and embedded electronics; troubleshoot mechanical and control issues during testing.
 \end{resumelist}
 
 \vspace{3pt}
 \roleentry{Robotics Hardware Intern (Co-op)}{PlaiPin Inc.}{\placeholder{DATES}}
 \begin{resumelist}
-  % REVIEW: The original resume establishes mechanical CAD design leadership.
-  % Confirm that the modular body configurations are interchangeable.
   \item Lead mechanical CAD design for a modular AI companion robot, developing the core device and interchangeable body configurations around actuators, sensors, and onboard electronics.
-  % REVIEW: Assembly-fit and component-packaging issue resolution expands on
-  % the original prototype iteration and hardware integration scope.
   \item Build and refine functional prototypes, resolving assembly fit and component-packaging issues through iterative fabrication and hardware integration.
 \end{resumelist}
 
 \vspace{3pt}
-% REVIEW: Confirm whether these employers represent separate roles and dates.
 \roleentry{Automation and Product Development Intern}{Thoplo Machine Pvt. Ltd. \& Baliyo Ventures Pvt. Ltd.}{2022--2024}
 \begin{resumelist}
-  % REVIEW: Confirm personal participation in each activity; the original
-  % describes contributions to machinery design, fabrication, assembly, and testing.
   \item Designed, fabricated, assembled, and tested mechanical systems for automated production machinery.
   \item Assembled industrial equipment, supported PLC wiring and lab setup, and fabricated parts using machining and fiber-reinforced molding.
 \end{resumelist}
@@ -147,6 +137,8 @@ I. S. Cardenas, M. A. Arnett, N. C. Yeo, \textbf{L. Sah}, and J.-H. Kim,
 \textit{arXiv preprint}, \href{https://arxiv.org/abs/2603.26997}{\underline{arXiv:2603.26997}}, 2026.\par
 \vspace{1.1pt}
 \ifshowfiller
+\begingroup
+\color{reviewred}
 % Fictional citation for assessing publication length and resume layout.
 M. Chen, \textbf{L. Sah}, A. Rivera, and D. Morgan,
 ``Design and Experimental Evaluation of a Low-Cost Modular Mobile Robot for Human--Robot Interaction Research,''
@@ -160,6 +152,7 @@ A. Rivera, M. Chen, \textbf{L. Sah}, and D. Morgan,
 \textit{Proceedings of the Sample Symposium on Humanoid Robotics},
 pp.~48--55, 2026.
 \mbox{\textit{(fictional layout sample)}}.\par
+\endgroup
 \fi
 
 \resumesection{Selected Engineering Projects}
@@ -183,6 +176,6 @@ pp.~48--55, 2026.
 \textbf{Fabrication:} FDM/resin 3D printing, CNC machining, soldering, silicone, polyurethane, and fiber-reinforced molding
 
 \resumesection{Robotics Competitions}
-World Robot Olympiad (Thailand); FIRST Global Challenge (Switzerland). \placeholder{ROLES, YEARS, AND RESULTS}
+World Robot Olympiad (Thailand); FIRST Global Challenge (Switzerland). \placeholder{ROLES, YEARS, AWARDS/RESULTS}
 
 \end{document}
