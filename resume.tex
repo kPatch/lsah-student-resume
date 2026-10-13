@@ -42,9 +42,9 @@
 
 % ---------- Resume components ----------
 \newcommand{\resumesection}[1]{%
-  \par\vspace{12.5pt}%
+  \par\vspace{9.5pt}%
   {\fontsize{10.5}{11}\selectfont\bfseries\MakeUppercase{#1}}\par
-  \vspace{1pt}\hrule height 0.75pt\vspace{6.5pt}%
+  \vspace{1pt}\hrule height 0.75pt\vspace{5.5pt}%
 }
 
 \newcommand{\firstresumesection}[1]{%
@@ -57,7 +57,7 @@
   \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{1em}}>{\raggedleft\arraybackslash}r@{}}
     \textbf{#1} & \textit{#3} \\
     \textit{#2} &
-  \end{tabularx}\vspace{-1.8pt}%
+  \end{tabularx}\vspace{-0.5pt}%
 }
 
 \newcommand{\educationentry}[3]{%
@@ -80,7 +80,8 @@
 }{\end{itemize}\vspace{0pt}}
 
 \begin{document}
-\fontsize{9.15}{10.65}\selectfont
+\fontsize{10}{11.5}\selectfont
+\raggedright
 
 % ---------- Header ----------
 \begin{center}
@@ -108,14 +109,15 @@ Coauthored research papers address mechanical systems, agentic robotics, and hum
   % to this ATR Lab role.
   \item Lead mechanical development of mobile robots and humanoid robotic mechanisms, designing structures, actuator mounts, and sensor assemblies from CAD through working prototypes.
   % REVIEW: The user confirmed full-stack robotics development and these tools.
-  % Specific ROS software ownership, simulation model development, and attribution
-  % to the ATR Lab role are proposed additions for the user's review.
-  \item Develop and integrate robotics software in ROS; build simulation models in Isaac Sim and MuJoCo to evaluate robot behavior and test hardware--software integration.
+  % Specific actuator-control and sensor-feedback interfaces, robot-motion models,
+  % and attribution to the ATR Lab role are proposed details for the user's review.
+  \item Develop ROS interfaces for actuator control and sensor feedback; build simulation models in Isaac Sim and MuJoCo to test robot motion and hardware--software integration.
   % REVIEW: Diagnosing mechanical and control issues is proposed wording;
   % confirm the specific testing and troubleshooting responsibilities.
-  \item Integrate actuators, sensors, and embedded electronics; diagnose mechanical and control issues during prototype testing.
+  \item Integrate actuators, sensors, and embedded electronics; troubleshoot mechanical and control issues during testing.
 \end{resumelist}
 
+\vspace{3pt}
 \roleentry{Robotics Hardware Intern (Co-op)}{PlaiPin Inc.}{\placeholder{DATES}}
 \begin{resumelist}
   % REVIEW: The original resume establishes mechanical CAD design leadership.
@@ -126,6 +128,8 @@ Coauthored research papers address mechanical systems, agentic robotics, and hum
   \item Build and refine functional prototypes, resolving assembly fit and component-packaging issues through iterative fabrication and hardware integration.
 \end{resumelist}
 
+\vspace{3pt}
+% REVIEW: Confirm whether these employers represent separate roles and dates.
 \roleentry{Automation and Product Development Intern}{Thoplo Machine Pvt. Ltd. \& Baliyo Ventures Pvt. Ltd.}{2022--2024}
 \begin{resumelist}
   % REVIEW: Confirm personal participation in each activity; the original
@@ -134,7 +138,10 @@ Coauthored research papers address mechanical systems, agentic robotics, and hum
   \item Assembled industrial equipment, supported PLC wiring and lab setup, and fabricated parts using machining and fiber-reinforced molding.
 \end{resumelist}
 
-\resumesection{Selected Publications}
+\resumesection{Education}
+\educationentry{B.S. in Mechatronics Engineering; Minor in Computer Science}{Kent State University --- Kent, Ohio}{Expected 2028}
+
+\resumesection{Publications \& Preprints}
 I. S. Cardenas, M. A. Arnett, N. C. Yeo, \textbf{L. Sah}, and J.-H. Kim,
 ``ROSClaw: An OpenClaw ROS 2 Framework for Agentic Robot Control and Interaction,''
 \textit{arXiv preprint}, \href{https://arxiv.org/abs/2603.26997}{\underline{arXiv:2603.26997}}, 2026.\par
@@ -158,28 +165,24 @@ pp.~48--55, 2026.
 \resumesection{Selected Engineering Projects}
 \textbf{Mini TurtleBot --- Low-Cost Modular Mobile Robot \textbar{} ATR Lab}
 \begin{resumelist}
-  \item Designed a chassis and motion architecture around low-cost fabrication, modular expansion, and straightforward integration of robotic hardware. \placeholder{TEST RESULT OR COST}
+  \item Designed a modular mobile robot chassis and motion architecture, supporting low-cost fabrication and hardware expansion. \placeholder{BUILD COST OR TEST RESULT}
 \end{resumelist}
 \textbf{KAMI Head --- Human-Robot Interaction Module}
 \begin{resumelist}
-  \item Designed an expressive robotic head integrating mechanical motion systems and embedded components for human--robot interaction; project resulted in a \textbf{CoRL 2025 workshop poster paper}.
+  \item Designed an expressive robotic head integrating actuation and embedded electronics for human--robot interaction; work contributed to a \textbf{CoRL 2025 workshop poster paper}.
 \end{resumelist}
 
 \resumesection{Technical Skills}
-\textbf{Mechanical Design:} Autodesk Inventor Professional, Fusion 360, SolidWorks, parametric assemblies, mechanisms, 3D modeling, bill-of-materials development\par
+% Add programming languages only after confirming actual project use.
+\textbf{Robotics \& Simulation:} ROS, Isaac Sim, MuJoCo\par
 \vspace{0.3pt}
-\textbf{Robotics \& Embedded:} ROS, Arduino, microcontrollers, actuators, sensors, motor drivers, electromechanical integration\par
+\textbf{Mechanical Design:} SolidWorks, Autodesk Inventor, Fusion 360, parametric CAD, mechanism design, BOM development\par
 \vspace{0.3pt}
-\textbf{Fabrication:} FDM and resin 3D printing, CNC machining, soldering, power tools, silicone, polyurethane, and fiber-reinforced molding\par
+\textbf{Embedded \& Controls:} Arduino, microcontrollers, sensor integration, motor drivers, PLC fundamentals\par
 \vspace{0.3pt}
-\textbf{Automation:} PLC fundamentals, industrial equipment assembly, wiring, and production-oriented fabrication
+\textbf{Fabrication:} FDM/resin 3D printing, CNC machining, soldering, silicone, polyurethane, and fiber-reinforced molding
 
-\resumesection{Education}
-\educationentry{B.S. in Mechatronics Engineering; Minor in Computer Science}{Kent State University --- Kent, Ohio}{Expected 2028}
-
-\resumesection{International Activities}
-\textbf{Selected competitions \& challenges:} World Robot Olympiad (Thailand); FIRST Global Challenge (Switzerland); Asian Development Bank Hackathon; Robo-Battle Bots; Robo Soccer. \placeholder{ROLE, YEAR, AND RESULT}\par
-\vspace{1.1pt}
-\textbf{Selected conferences \& programs:} Founders, Inc. (San Francisco); Asian Pacific Conference of Young Scientists. \placeholder{ROLE}
+\resumesection{Robotics Competitions}
+World Robot Olympiad (Thailand); FIRST Global Challenge (Switzerland). \placeholder{ROLES, YEARS, AND RESULTS}
 
 \end{document}
