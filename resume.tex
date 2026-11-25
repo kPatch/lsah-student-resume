@@ -4,9 +4,9 @@
 % Formatting follows the supplied Word resume while improving hierarchy.
 % Change \showfillertrue to \showfillerfalse to hide bracketed prompts.
 % Experience, project, and technical claims are confirmed by the user.
-% Red review marks apply only to missing fields and fictional publication samples.
+% Red review marks apply only to missing fields.
 
-\usepackage[letterpaper,top=0.42in,bottom=0.42in,left=0.55in,right=0.55in]{geometry}
+\usepackage[letterpaper,top=0.35in,bottom=0.35in,left=0.55in,right=0.55in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage{tgheros}
 \renewcommand{\familydefault}{\sfdefault}
@@ -96,7 +96,9 @@
   }\par
   \vspace{3pt}
   Kent, OH \textbar{} \href{mailto:lsah@kent.edu}{\underline{lsah@kent.edu}}
-  \ifshowfiller\ \textbar{} \placeholder{PHONE}\ \textbar{} \placeholder{LINKEDIN OR PORTFOLIO URL}\fi
+  \textbar{} +1 857 468 2725
+  \textbar{} \href{https://www.linkedin.com/in/luckysah/}{\underline{linkedin.com/in/luckysah}}
+  \textbar{} \href{https://luckysah.com}{\underline{luckysah.com}}
 \end{center}
 \vspace{1pt}
 
@@ -104,10 +106,10 @@
 Undergraduate robotics researcher and full-stack robotics developer pursuing a degree in mechatronics engineering.
 Develops humanoid robotic systems from mechanical design and fabrication through hardware integration, robotics software,
 and simulation, using SolidWorks, Autodesk Inventor, ROS, Isaac Sim, and MuJoCo.
-Coauthored research papers address mechanical systems, agentic robotics, and human--robot interaction.
+Coauthored research papers address mechanical systems, agentic robotics, and human-robot interaction.
 
 \resumesection{Research \& Engineering Experience}
-\roleentry{Robotics Researcher}{Advanced Telerobotics Research (ATR) Lab, Kent State University}{\startpresent}
+\roleentry{Robotics Researcher}{Advanced Telerobotics Research (ATR) Lab, Kent State University}{Jan 2025 - Present}
 \begin{resumelist}
   \item Lead mechanical development of mobile robots and humanoid robotic mechanisms, designing structures, actuator mounts, and sensor assemblies from CAD through working prototypes.
   \item Develop ROS interfaces for actuator control and sensor feedback; build simulation models in Isaac Sim and MuJoCo to test robot motion and hardware--software integration.
@@ -115,7 +117,7 @@ Coauthored research papers address mechanical systems, agentic robotics, and hum
 \end{resumelist}
 
 \vspace{3pt}
-\roleentry{Robotics Hardware Intern (Co-op)}{PlaiPin Inc.}{\placeholder{DATES}}
+\roleentry{Robotics Hardware Intern (Co-op)}{PlaiPin Inc.}{Jan-May 2026}
 \begin{resumelist}
   \item Lead mechanical CAD design for a modular AI companion robot, developing the core device and interchangeable body configurations around actuators, sensors, and onboard electronics.
   \item Build and refine functional prototypes, resolving assembly fit and component-packaging issues through iterative fabrication and hardware integration.
@@ -132,33 +134,26 @@ Coauthored research papers address mechanical systems, agentic robotics, and hum
 \educationentry{B.S. in Mechatronics Engineering; Minor in Computer Science}{Kent State University --- Kent, Ohio}{Expected 2028}
 
 \resumesection{Publications \& Preprints}
+M. A. Arnett, I. S. Cardenas, \textbf{L. Sah}, and J.-H. Kim,
+``Deictic Shared-Autonomy Manipulation via Continuous Markerless Egocentric MR-to-Robot Frame Fusion,''
+in \textit{Proc. IEEE RO-MAN}, 2026.\par
+\vspace{1.1pt}
+R. Ashraf, \textbf{L. Sah}, K. Hemanth, N. S. Jagarlamudi, E. Lee, and J.-H. Kim,
+``PawFeeder: An Edge-to-Server Multi-Device Framework Toward Canine Feeding-Behavior Analysis,''
+in \textit{Proc. IHCI}, 2026 (accepted).\par
+\vspace{1.1pt}
 I. S. Cardenas, M. A. Arnett, N. C. Yeo, \textbf{L. Sah}, and J.-H. Kim,
 ``ROSClaw: An OpenClaw ROS 2 Framework for Agentic Robot Control and Interaction,''
 \textit{arXiv preprint}, \href{https://arxiv.org/abs/2603.26997}{\underline{arXiv:2603.26997}}, 2026.\par
 \vspace{1.1pt}
-\ifshowfiller
-\begingroup
-\color{reviewred}
-% Fictional citation for assessing publication length and resume layout.
-M. Chen, \textbf{L. Sah}, A. Rivera, and D. Morgan,
-``Design and Experimental Evaluation of a Low-Cost Modular Mobile Robot for Human--Robot Interaction Research,''
-\textit{Proceedings of the Sample Robotics Research Conference},
-pp.~112--119, 2026.
-\mbox{\textit{(fictional layout sample)}}.\par
-\vspace{1.1pt}
-% Second fictional citation for assessing a three-paper publication section.
-A. Rivera, M. Chen, \textbf{L. Sah}, and D. Morgan,
-``A Compact Tendon-Driven Actuation Mechanism for Expressive Humanoid Robotic Heads,''
-\textit{Proceedings of the Sample Symposium on Humanoid Robotics},
-pp.~48--55, 2026.
-\mbox{\textit{(fictional layout sample)}}.\par
-\endgroup
-\fi
+H. S. Shaon, \textbf{L. Sah}, C. Tirkey, B. T. Giddaluru, X. Lin, and J.-H. Kim,
+``Mini TurtleBot: An Open-Source, Low-Cost, and Customizable Platform for Mobile Robotics Learning,''
+in \textit{CoRL 2025 Workshop on Open Hardware}, 2025.\par
 
 \resumesection{Selected Engineering Projects}
 \textbf{Mini TurtleBot --- Low-Cost Modular Mobile Robot \textbar{} ATR Lab}
 \begin{resumelist}
-  \item Designed a modular mobile robot chassis and motion architecture, supporting low-cost fabrication and hardware expansion. \placeholder{BUILD COST OR TEST RESULT}
+  \item Designed a modular mobile robot chassis and motion architecture for low-cost fabrication (\$50--\$70 build cost) and hardware expansion.
 \end{resumelist}
 \textbf{KAMI Head --- Human-Robot Interaction Module}
 \begin{resumelist}
@@ -176,6 +171,6 @@ pp.~48--55, 2026.
 \textbf{Fabrication:} FDM/resin 3D printing, CNC machining, soldering, silicone, polyurethane, and fiber-reinforced molding
 
 \resumesection{Robotics Competitions}
-World Robot Olympiad (Thailand); FIRST Global Challenge (Switzerland). \placeholder{ROLES, YEARS, AWARDS/RESULTS}
+World Robot Olympiad (Thailand, 2018); FIRST Global Challenge (Switzerland, 2020, 2022).
 
 \end{document}
