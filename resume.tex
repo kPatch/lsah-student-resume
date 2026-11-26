@@ -46,9 +46,9 @@
 
 % ---------- Resume components ----------
 \newcommand{\resumesection}[1]{%
-  \par\vspace{9.5pt}%
+  \par\vspace{7.5pt}%
   {\fontsize{10.5}{11}\selectfont\bfseries\MakeUppercase{#1}}\par
-  \vspace{1pt}\hrule height 0.75pt\vspace{5.5pt}%
+  \vspace{1pt}\hrule height 0.75pt\vspace{4.5pt}%
 }
 
 \newcommand{\firstresumesection}[1]{%
@@ -109,18 +109,18 @@ and simulation, using SolidWorks, Autodesk Inventor, ROS, Isaac Sim, and MuJoCo.
 Coauthored research papers address mechanical systems, agentic robotics, and human-robot interaction.
 
 \resumesection{Research \& Engineering Experience}
-\roleentry{Robotics Researcher}{Advanced Telerobotics Research (ATR) Lab, Kent State University}{Jan 2025 - Present}
+\roleentry{Robotics Researcher}{Advanced Telerobotics Research (ATR) Lab, Kent State University}{Jan 2025 -- Present}
 \begin{resumelist}
   \item Lead mechanical development of mobile robots and humanoid robotic mechanisms, designing structures, actuator mounts, and sensor assemblies from CAD through working prototypes.
-  \item Develop ROS interfaces for actuator control and sensor feedback; build simulation models in Isaac Sim and MuJoCo to test robot motion and hardware--software integration.
+  \item Develop Python and C++ ROS interfaces that send actuator commands and stream sensor feedback. Use Isaac Sim and MuJoCo to test robot motion.
   \item Integrate actuators, sensors, and embedded electronics; troubleshoot mechanical and control issues during testing.
 \end{resumelist}
 
 \vspace{3pt}
-\roleentry{Robotics Hardware Intern (Co-op)}{PlaiPin Inc.}{Jan-May 2026}
+\roleentry{Robotics Hardware Intern (Co-op)}{PlaiPin Inc.}{Jan--May 2026}
 \begin{resumelist}
-  \item Lead mechanical CAD design for a modular AI companion robot, developing the core device and interchangeable body configurations around actuators, sensors, and onboard electronics.
-  \item Build and refine functional prototypes, resolving assembly fit and component-packaging issues through iterative fabrication and hardware integration.
+  \item Led mechanical CAD design for a modular AI companion robot, developing the core device and interchangeable body configurations around actuators, sensors, and onboard electronics.
+  \item Built and refined functional prototypes, resolving assembly fit and component-packaging issues through iterative fabrication and hardware integration.
 \end{resumelist}
 
 \vspace{3pt}
@@ -131,7 +131,7 @@ Coauthored research papers address mechanical systems, agentic robotics, and hum
 \end{resumelist}
 
 \resumesection{Education}
-\educationentry{B.S. in Mechatronics Engineering; Minor in Computer Science}{Kent State University --- Kent, Ohio}{Expected 2028}
+\educationentry{B.S. in Mechatronics Engineering; Minor in Computer Science}{Kent State University, Kent, Ohio}{Expected 2028}
 
 \resumesection{Publications \& Preprints}
 M. A. Arnett, I. S. Cardenas, \textbf{L. Sah}, and J.-H. Kim,
@@ -151,18 +151,19 @@ H. S. Shaon, \textbf{L. Sah}, C. Tirkey, B. T. Giddaluru, X. Lin, and J.-H. Kim,
 in \textit{CoRL 2025 Workshop on Open Hardware}, 2025.\par
 
 \resumesection{Selected Engineering Projects}
-\textbf{Mini TurtleBot --- Low-Cost Modular Mobile Robot \textbar{} ATR Lab}
+\textbf{Mini TurtleBot: Low-Cost Modular Mobile Robot \textbar{} ATR Lab}
 \begin{resumelist}
   \item Designed a modular mobile robot chassis and motion architecture for low-cost fabrication (\$50--\$70 build cost) and hardware expansion.
+  \item In AI-controlled motion tests, motion-duration error was approximately \textbf{3~ms}.
 \end{resumelist}
-\textbf{KAMI Head --- Human-Robot Interaction Module}
+\textbf{KAMI Head: Human-Robot Interaction Module}
 \begin{resumelist}
-  \item Designed an expressive robotic head integrating actuation and embedded electronics for human--robot interaction; work contributed to a \textbf{CoRL 2025 workshop poster paper}.
+  \item Designed an expressive robotic head integrating actuation and embedded electronics for human-robot interaction; work contributed to a \textbf{CoRL 2025 workshop poster paper}.
 \end{resumelist}
 
 \resumesection{Technical Skills}
-% Add programming languages only after confirming actual project use.
-\textbf{Robotics \& Simulation:} ROS, Isaac Sim, MuJoCo\par
+% Python and C++ confirmed by the user for ROS/robotics software work.
+\textbf{Robotics \& Simulation:} Python, C++, ROS, Isaac Sim, MuJoCo\par
 \vspace{0.3pt}
 \textbf{Mechanical Design:} SolidWorks, Autodesk Inventor, Fusion 360, parametric CAD, mechanism design, BOM development\par
 \vspace{0.3pt}
@@ -171,6 +172,7 @@ in \textit{CoRL 2025 Workshop on Open Hardware}, 2025.\par
 \textbf{Fabrication:} FDM/resin 3D printing, CNC machining, soldering, silicone, polyurethane, and fiber-reinforced molding
 
 \resumesection{Robotics Competitions}
-World Robot Olympiad (Thailand, 2018); FIRST Global Challenge (Switzerland, 2020, 2022).
+\textbf{World Robot Olympiad (Thailand, 2018):} Team Lead and Core Mechanical Designer.\par
+FIRST Global Challenge (2020: virtual; 2022: Geneva, Switzerland).
 
 \end{document}
