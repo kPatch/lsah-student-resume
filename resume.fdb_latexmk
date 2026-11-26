@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1795650827.69405 "/Users/luckysah/Documents/Portfolio/Github/lsah-student-resume/resume.tex" "resume.pdf" "resume" 1795650828.63206 0
-  "/Users/luckysah/Documents/Portfolio/Github/lsah-student-resume/resume.tex" 1795650827.46748 7519 0ac6691d7807988d72ae4a0327c397e1 ""
+["pdflatex"] 1795653918.61091 "/Users/luckysah/Documents/Portfolio/Github/lsah-student-resume/resume.tex" "resume.pdf" "resume" 1795653919.5405 0
+  "/Users/luckysah/Documents/Portfolio/Github/lsah-student-resume/resume.tex" 1795653918.36659 7508 7eea9a0d8374dff4185118dc9e2c8b9d ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/tex-gyre/q-ec.enc" 1529098226 2457 aaabbccba4df2a7f7371410ee4e075a3 ""
   "/usr/local/texlive/2026/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc" 1529098226 3124 3813fd4c981d99822890a2861b0d274c ""
   "/usr/local/texlive/2026/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -62,9 +62,9 @@
   "/usr/local/texlive/2026/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1795628885 5573038 b99aad5e4898a9034e953632f940512b ""
   "/usr/local/texlive/2026/texmf-var/web2c/pdftex/pdflatex.fmt" 1774209607 3636776 dc5fa9b6b1453b9d196cd42edf876004 ""
   "/usr/local/texlive/2026/texmf.cnf" 1774209515 577 648cd9f92f9c0eac486f4c71c85cfbbe ""
-  "resume.aux" 1795650828.55999 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
-  "resume.out" 1795650828.23756 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
-  "resume.tex" 1795650827.46748 7519 0ac6691d7807988d72ae4a0327c397e1 ""
+  "resume.aux" 1795653919.46879 162 55205a9e8a8eca30d36afb389b0617bf "pdflatex"
+  "resume.out" 1795653919.14283 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "resume.tex" 1795653918.36659 7508 7eea9a0d8374dff4185118dc9e2c8b9d ""
   (generated)
   "resume.aux"
   "resume.log"
